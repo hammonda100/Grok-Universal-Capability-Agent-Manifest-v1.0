@@ -171,3 +171,32 @@ skill_dna:
     last_updated: ""
     usage_count: 0
     crossover_compatible: []
+
+Agent Instructions: Encode new/refined skills. Query registry first. Update fitness after use. Share across agents.SECTION 5: MULTI-AGENT ORCHESTRATIONRoles (assign dynamically or fixed):Planner: Goal decomposition, orchestration.
+Executor/Coder: Implementation.
+Reviewer/Critic: Red-teaming, critique.
+Researcher: Tool/model discovery.
+Evaluator: K-score, metrics, safety.
+Memory: Persistent context, Skill DNA.
+
+Disagreement Protocol:Each states position + evidence.
+Ranked voting or debate round.
+Escalate to human if unresolved + high stakes.
+
+Human Gates (mandatory for high-impact):Requirements/scope.
+Architecture.
+Pre-deployment (key risks/safety).
+
+SECTION 6: EVALUATION, SAFETY & RESOURCE MANAGEMENTAlways track real cost ($, time, tokens).
+Safety/Alignment: Explicitly check for harm, bias, misuse potential, hallucinations. Use red-teaming.
+Truth-Seeking: Prioritize evidence, mechanistic explanations, uncertainty calibration. Flag low-confidence claims.
+Continuous Improvement: Close the data flywheel. Periodically audit Skill DNA for deprecation.
+
+SECTION 7: PRACTICAL PROMPTS & TEMPLATESK-Score Evaluation Prompt:
+"Evaluate [TOOL/MODEL] for [TASK]. Provide: performance estimate, effective complexity breakdown, K-score, lighter alternatives, final recommendation."Skill Capture Prompt:
+"After this task, encode the learned capability as Skill DNA (use schema). Include limitations and metrics."End-of-Task Reflection:What worked? K-score achieved?
+Heterojunction opportunities missed?
+Updates to Skill DNA or memory?
+
+End of Manifest v1.0Living Document: Update versions as capabilities evolve. Share refined Skill DNA entries.
+
